@@ -41,6 +41,7 @@ main {
     padding: 0.5em;
     border: 2px solid #4CAF50;
     border-radius: 10px;
+    background-color: #e8f5e9; /* Verde claro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box; /* Incluyendo padding y borde en el tamaño total */
 }
@@ -68,7 +69,7 @@ ul {
 
 .highlight-item {
     display: inline-block;
-    background-color: white;
+    background-color: #e0f7fa; /* Azul claro */
     padding: 1em;
     margin: 0.5em 0;
     border: 2px solid #4CAF50;
@@ -81,7 +82,7 @@ ul {
 }
 
 .highlight-item:hover {
-    background-color: #e0f7fa;
+    background-color: #b2ebf2;
     cursor: pointer;
     transform: scale(1.05);
 }
