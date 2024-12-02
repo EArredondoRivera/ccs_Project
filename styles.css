@@ -4,6 +4,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    box-sizing: border-box; /* Aplicando border-box a todo el documento */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 /* Header */
@@ -13,6 +18,7 @@ header {
     text-align: center;
     padding: 1em 0;
     margin-bottom: 1em;
+    box-sizing: content-box; /* Manteniendo el contenido dentro de los límites del padding y el borde */
 }
 
 h1 {
@@ -36,6 +42,7 @@ main {
     border: 2px solid #4CAF50;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Incluyendo padding y borde en el tamaño total */
 }
 
 /* Highlights */
@@ -68,7 +75,7 @@ ul {
     border-radius: 10px;
     width: calc(100% - 2em);
     height: 100px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Incluyendo padding y borde en el tamaño total */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -88,4 +95,5 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-sizing: border-box; /* Incluyendo padding y borde en el tamaño total */
 }
