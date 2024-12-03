@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    box-sizing: border-box; /* Aplicando border-box a todo el documento */
+    box-sizing: border-box;
 }
 
 *, *::before, *::after {
@@ -17,33 +17,27 @@ header {
     color: white;
     text-align: center;
     padding: 1em 0;
-    margin-bottom: 1em;
-    box-sizing: content-box; /* Manteniendo el contenido dentro de los límites del padding y el borde */
-}
-
-h1 {
-    margin: 0;
-    font-size: 2em;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 /* Main */
 main {
     padding: 2em;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 1em;
 }
 
 /* Introducción */
-.intro p {
-    font-size: 1.2em;
-    margin: 1em 0;
-    padding: 0.5em;
-    border: 2px solid #4CAF50;
+.intro {
+    position: relative; /* Posicionamiento relativo */
+    padding: 1em;
+    border: 1px solid #4CAF50;
+    background-color: #e8f5e9;
     border-radius: 10px;
-    background-color: #e8f5e9; /* Verde claro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Incluyendo padding y borde en el tamaño total */
 }
 
 /* Highlights */
@@ -51,12 +45,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.highlights h2 {
-    color: #4CAF50;
-    margin-bottom: 0.5em;
-    font-family: 'Georgia', serif;
+    position: static; /* Posicionamiento por defecto */
 }
 
 ul {
@@ -68,22 +57,16 @@ ul {
 }
 
 .highlight-item {
-    display: inline-block;
-    background-color: #e0f7fa; /* Azul claro */
+    position: relative; /* Para efectos relativos */
+    background-color: #e0f7fa;
     padding: 1em;
-    margin: 0.5em 0;
     border: 2px solid #4CAF50;
     border-radius: 10px;
-    width: calc(100% - 2em);
-    height: 100px;
-    box-sizing: border-box; /* Incluyendo padding y borde en el tamaño total */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .highlight-item:hover {
     background-color: #b2ebf2;
-    cursor: pointer;
     transform: scale(1.05);
 }
 
@@ -96,5 +79,24 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    box-sizing: border-box; /* Incluyendo padding y borde en el tamaño total */
+}
+
+/* Chatbot */
+.chatbot {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 0.9em;
+    text-align: center;
+    width: 200px;
+}
+
+.chatbot:hover {
+    background-color: #45a049;
 }
