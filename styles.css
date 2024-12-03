@@ -27,12 +27,12 @@ main {
     padding: 2em;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
 }
 
 /* Introducción */
 .intro {
-    position: relative; /* Posicionamiento relativo */
+    position: relative;
     padding: 1em;
     border: 1px solid #4CAF50;
     background-color: #e8f5e9;
@@ -45,7 +45,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: static; /* Posicionamiento por defecto */
 }
 
 ul {
@@ -57,7 +56,7 @@ ul {
 }
 
 .highlight-item {
-    position: relative; /* Para efectos relativos */
+    position: relative;
     background-color: #e0f7fa;
     padding: 1em;
     border: 2px solid #4CAF50;
@@ -68,6 +67,47 @@ ul {
 .highlight-item:hover {
     background-color: #b2ebf2;
     transform: scale(1.05);
+}
+
+/* Nueva sección general */
+section {
+    padding: 1.5em;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+/* Títulos de sección */
+section h2 {
+    color: #4CAF50;
+    font-family: 'Georgia', serif;
+    margin-bottom: 1em;
+}
+
+/* Párrafos */
+section p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+/* Listas */
+section ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+section ul li {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    color: #555;
 }
 
 /* Footer */
