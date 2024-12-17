@@ -11,7 +11,6 @@ body {
     box-sizing: inherit;
 }
 
-/* Header */
 header {
     background-color: #4CAF50;
     color: white;
@@ -22,7 +21,6 @@ header {
     z-index: 10;
 }
 
-/* Main */
 main {
     padding: 2em;
     display: flex;
@@ -30,7 +28,6 @@ main {
     gap: 2em;
 }
 
-/* Introducción */
 .intro {
     position: relative;
     padding: 1em;
@@ -40,7 +37,6 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Highlights */
 .highlights {
     display: flex;
     flex-direction: column;
@@ -69,7 +65,6 @@ ul {
     transform: scale(1.05);
 }
 
-/* Nueva sección general */
 section {
     padding: 1.5em;
     background-color: white;
@@ -83,14 +78,12 @@ section:hover {
     transform: scale(1.02);
 }
 
-/* Títulos de sección */
 section h2 {
     color: #4CAF50;
     font-family: 'Georgia', serif;
     margin-bottom: 1em;
 }
 
-/* Párrafos */
 section p {
     font-size: 1em;
     line-height: 1.5;
@@ -98,7 +91,6 @@ section p {
     color: #333;
 }
 
-/* Listas */
 section ul {
     list-style-type: disc;
     padding-left: 1.5em;
@@ -110,7 +102,6 @@ section ul li {
     color: #555;
 }
 
-/* Footer */
 footer {
     background-color: #4CAF50;
     color: white;
@@ -121,7 +112,6 @@ footer {
     width: 100%;
 }
 
-/* Chatbot */
 .chatbot {
     position: fixed;
     bottom: 80px;
@@ -139,4 +129,22 @@ footer {
 
 .chatbot:hover {
     background-color: #45a045;
+}
+
+/* Especificidad y herencia */
+.intro p {
+    font-size: 1.1em; /* Ejemplo de especificidad */
+}
+
+.highlights ul {
+    padding-left: 2em; /* Ejemplo de especificidad */
+}
+
+.culture, .gastronomy, .adventure, .history {
+    padding: 2em;
+    background-color: #f9f9f9; /* Ejemplo de herencia */
+}
+
+.culture h2, .gastronomy h2, .adventure h2, .history h2 {
+    color: #2E7D32; /* Ejemplo de especificidad */
 }
